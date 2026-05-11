@@ -58,6 +58,7 @@ function saveRecipesToStorage(recipes) {
 	// B1. TODO - Complete the functionality as described in this function
 	//            header. It is possible in only a single line, but should
 	//            be no more than a few lines.
+	localStorage.setItem('recipes',JSON.stringify(recipes));
 }
 
 /**
@@ -75,7 +76,7 @@ function initFormHandler() {
 	
 	// Steps B4-B9 will occur inside the event listener from step B3
 	// B4. TODO - Create a new FormData object from the <form> element reference above
-	const formData = new formData(form);
+	const formData = new FormData(form);
 	// B5. TODO - Create an empty object (we'll refer to this object as recipeObject to
 	//            make this easier to read), and then extract the keys and corresponding
 	//            values from the FormData object and insert them into recipeObject
